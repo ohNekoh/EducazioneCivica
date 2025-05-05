@@ -1,0 +1,173 @@
+/* Stile generale */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0fdf4;
+    color: #222;
+  }
+  
+  .navbar {
+    background-color: #198754;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar button {
+    background-color: #fff;
+    color: #198754;
+    border: none;
+    margin: 0 1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar button:hover {
+    background-color: #d1e7dd;
+  }
+  
+  .section-header {
+    background: linear-gradient(to right, #198754, #20c997);
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    margin-top: 2rem;
+    border-radius: 12px 12px 0 0;
+    animation: fadeInDown 1s ease;
+  }
+  
+  .section-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  
+  /* Sezioni */
+  .content-section {
+    padding: 2rem;
+    animation: fadeIn 1s ease;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .text, .image-side {
+    flex: 1 1 45%;
+    min-width: 280px;
+  }
+  
+  .text h2 {
+    color: #198754;
+    font-size: 1.5rem;
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .text h2::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background-color: #198754;
+    bottom: -5px;
+    left: 0;
+    border-radius: 2px;
+  }
+  
+  img {
+    width: 100%;
+    max-width: 330px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: block;
+    margin: 0 auto;
+  }
+  
+  
+  .inline-img {
+    margin: 1rem 0;
+  }
+  
+  .images-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  
+  .images-row img {
+    flex: 1 1 48%;
+  }
+  
+  .single-section {
+    margin-bottom: 2rem;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Animazioni */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+    }
+  
+    .images-row img {
+      flex: 1 1 100%;
+    }
+  }
+  
+
+  img.full-width {
+    width: 100%;
+    max-width: none;
+    aspect-ratio: unset;
+    height: auto;
+  }
+  
+
+
+/* Aggiungi questo al tuo CSS */
+.content-section.hidden {
+    display: none;
+  }
+  
+  .section-header i {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .section-header i.fas.fa-minus {
+    transform: rotate(45deg);
+  }
+  
+  .section-header i.fas.fa-plus {
+    transform: rotate(0deg);
+  }
+  
